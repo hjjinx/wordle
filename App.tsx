@@ -11,7 +11,7 @@
 import React from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import {palette} from './src/common';
-import GameScreen from './src/Game/Game';
+import GameScreen from './src/screens/Game';
 
 const App = () => {
   return (

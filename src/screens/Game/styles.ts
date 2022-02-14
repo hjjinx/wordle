@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {palette, screenWidth} from '../common';
+import {palette, screenWidth} from '../../common';
 
 export default StyleSheet.create({
   mainContainer: {
