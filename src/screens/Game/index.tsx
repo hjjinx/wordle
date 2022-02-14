@@ -72,6 +72,7 @@ const GameScreen = () => {
       if (scoreArr.find(i => i != 2) == undefined) {
         Alert.alert('You win!');
         setIsGameOver(true);
+        return;
       }
       if (currentLetter[0] < 5) setCurrentLetter([currentLetter[0] + 1, 0]);
       else {
