@@ -3,7 +3,7 @@ import {Alert, Text, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 import WORDS from '../../common/word-list.json';
 import KeyBoard from '../KeyBoard';
-import {palette} from '../../common';
+import {initialKeyboardLayout, palette} from '../../common';
 
 const GameScreen = () => {
   const [answer, setAnswer] = useState(
@@ -23,7 +23,7 @@ const GameScreen = () => {
   );
   const [currentLetter, setCurrentLetter] = useState([0, 0]);
   const [isGameOver, setIsGameOver] = useState(false);
-
+  const [keyboardLayout, setKeyboardLayout] = useState(initialKeyboardLayout);
   const onEnterLetter = (letter: any) => {
     if (isGameOver) return;
     if (letter === 'Enter' && currentLetter[1] == 5) {
@@ -59,6 +59,18 @@ const GameScreen = () => {
           answerTemp = answerTemp.replace(letter.letter, '-');
         }
       }
+      const lettersWithScores = scoreArr.map((i: any, index: number) => ({
+        letter: word[index].toUpperCase(),
+        score: i,
+      }));
+      setKeyboardLayout(
+        keyboardLayout.map((row: any, index: number) =>
+          row.map(
+            (i: any) =>
+              lettersWithScores.find((j: any) => j.letter == i.letter) || i,
+          ),
+        ),
+      );
       setWords(
         words.map((i, index1) =>
           index1 == currentLetter[0]
@@ -115,6 +127,7 @@ const GameScreen = () => {
       ),
     );
     setCurrentLetter([0, 0]);
+    setKeyboardLayout(initialKeyboardLayout);
     setIsGameOver(false);
   };
 
@@ -166,7 +179,7 @@ const GameScreen = () => {
           </View>
         ))}
       </View>
-      <KeyBoard onEnterLetter={onEnterLetter} />
+      <KeyBoard onEnterLetter={onEnterLetter} keyboardLayout={keyboardLayout} />
     </View>
   );
 };
