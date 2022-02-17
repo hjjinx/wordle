@@ -24,5 +24,6 @@ export default StyleSheet.create({
   },
   text: {
     fontSize: 18,
+    color: palette.primaryBg,
   },
 });

@@ -41,7 +41,7 @@ const GameScreen = () => {
         letter: char,
         isUsed: false,
       }));
-      const scoreArr = [0, 0, 0, 0, 0];
+      const scoreArr = [-1, -1, -1, -1, -1];
       for (let index in wordTemp) {
         let letter = wordTemp[index];
         if (answerTemp[index] == letter.letter) {
@@ -141,19 +141,23 @@ const GameScreen = () => {
               <View
                 style={[
                   styles.box,
-                  {
+                  letter.score !== 0 && {
                     backgroundColor:
                       letter.score == 2
-                        ? 'green'
+                        ? palette.green
                         : letter.score == 1
-                        ? 'yellow'
-                        : palette.primaryBg,
+                        ? palette.yellow
+                        : letter.score == 0
+                        ? palette.primaryBg
+                        : palette.primaryBorder,
                   },
                 ]}>
                 <Text
                   style={[
                     styles.letterText,
-                    letter.score == 1 && {color: palette.primaryBg},
+                    (letter.score == 1 || letter.score == -1) && {
+                      color: palette.primaryBg,
+                    },
                   ]}>
                   {letter.letter}
                 </Text>

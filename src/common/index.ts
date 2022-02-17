@@ -5,6 +5,8 @@ export const palette = {
   primaryBorder: '#ccc',
   primaryText: '#fff',
   secondaryBg: '#f2efe2',
+  green: 'green',
+  yellow: 'yellow',
 };
 
 export const screenWidth = Dimensions.get('window').width;
