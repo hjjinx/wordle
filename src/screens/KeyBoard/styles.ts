@@ -17,7 +17,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: palette.primaryBorder,
     minWidth: screenWidth / 12,
-    height: screenWidth / 8,
+    height: screenWidth / 7,
     paddingHorizontal: '2%',
     marginHorizontal: 1,
     marginBottom: 1,
