@@ -133,19 +133,8 @@ const GameScreen = () => {
 
   return (
     <View style={{flex: 1}}>
-      <TouchableOpacity
-        style={{
-          padding: 15,
-          alignSelf: 'center',
-          backgroundColor: palette.secondaryBg,
-          borderRadius: 100,
-          width: '80%',
-          marginBottom: 20,
-        }}
-        onPress={onPressStartNewGame}>
-        <Text style={{color: palette.primaryBg, textAlign: 'center'}}>
-          New Game
-        </Text>
+      <TouchableOpacity style={styles.button} onPress={onPressStartNewGame}>
+        <Text style={styles.buttonText}>New Game</Text>
       </TouchableOpacity>
       <View style={{flex: 1}}>
         {words.map((row: any[5]) => (

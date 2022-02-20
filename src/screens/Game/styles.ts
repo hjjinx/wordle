@@ -27,5 +27,21 @@ export default StyleSheet.create({
     fontSize: 18,
     color: palette.primaryText,
     textTransform: 'uppercase',
+    fontFamily: 'Rubik-Regular',
+  },
+  button: {
+    padding: 15,
+    alignSelf: 'center',
+    backgroundColor: palette.secondaryBg,
+    borderRadius: 100,
+    width: '80%',
+    marginBottom: 20,
+  },
+  buttonText: {
+    color: palette.primaryBg,
+    textAlign: 'center',
+    fontFamily: 'Rubik-Regular',
+    fontSize: 16,
+    textTransform: 'uppercase',
   },
 });
