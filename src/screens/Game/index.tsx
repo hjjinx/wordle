@@ -88,7 +88,7 @@ const GameScreen = () => {
       }
       if (currentLetter[0] < 5) setCurrentLetter([currentLetter[0] + 1, 0]);
       else {
-        Alert.alert('You lost!');
+        Alert.alert('You lost! The correct word was ' + answer);
         setIsGameOver(true);
       }
     } else if (letter == 'Back' && currentLetter[1] > 0) {
