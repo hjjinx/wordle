@@ -1,6 +1,6 @@
 # Wordle
 
-The famous Wordle game made in React Native.
+The famous Wordle game made in React Native. Download from [here](https://drive.google.com/file/d/1xBhgiLpfONjHsA4B6BE7HvLdwShBIC6E/view?usp=sharing)
 
 ![alt text](./android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
