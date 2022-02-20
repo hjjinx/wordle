@@ -21,6 +21,7 @@ export default StyleSheet.create({
     borderColor: palette.primaryBorder,
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: 5,
   },
   letterText: {
     fontSize: 18,

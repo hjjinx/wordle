@@ -2,6 +2,7 @@ import {Dimensions} from 'react-native';
 
 export const palette = {
   primaryBg: '#000',
+  primaryBgLight: '#111',
   primaryBorder: '#ccc',
   primaryText: '#fff',
   secondaryBg: '#f2efe2',

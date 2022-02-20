@@ -26,7 +26,7 @@ const KeyBoard = (props: KeyBoardProps) => {
                       ? palette.green
                       : letter.score === 0
                       ? palette.secondaryBg
-                      : palette.primaryBg,
+                      : palette.primaryBgLight,
                 },
               ]}
               activeOpacity={0.9}

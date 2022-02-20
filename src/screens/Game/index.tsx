@@ -61,7 +61,7 @@ const GameScreen = () => {
       }
       const lettersWithScores = scoreArr.map((i: any, index: number) => ({
         letter: word[index].toUpperCase(),
-        score: i,
+        score: i == -1 ? -1 : 0,
       }));
       setKeyboardLayout(
         keyboardLayout.map((row: any, index: number) =>
@@ -163,6 +163,7 @@ const GameScreen = () => {
                         : letter.score == 0
                         ? palette.primaryBg
                         : palette.primaryBorder,
+                    borderWidth: 0,
                   },
                 ]}>
                 <Text
